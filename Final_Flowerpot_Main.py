@@ -33,11 +33,11 @@ print("Connection successful")
 
 lightThreshold = 20 # light sensor threshold in percent (%)
 rotateBaseDirection = 'CW' # Set initial direction to clockwise
-rotateBaseDegrees = 5 # Base rotation amount per interval; keep this amount low
+rotateBaseDegrees = 1 # Base rotation amount per interval; keep this amount low
 
-baseDelay = 10 # delay for checking the light to run base rotation
-pumpDelay = 30 # delay for checking the moisture to run pump
-DataDelay = 4
+baseDelay = 60 # delay for checking the light to run base rotation
+pumpDelay = 60*60 # delay for checking the moisture to run pump
+DataDelay = 60*60
 
 
 previousBaseRun = time.time() # Initialize; for checking if base rotation functions should occur
@@ -52,7 +52,7 @@ maxPumpTime = 100 # when the pump theoretically runs out of water
 pumpRunTime = 4 # Amount of time the pump will run per interval
 pump = False
 
-moistureThreshold = 80 # Threshold value for soil moisture
+moistureThreshold = 40 # Threshold value for soil moisture
 
 # Check that there is water in the tank before proceeding
 # waterLevel = read_WaterLevel()
